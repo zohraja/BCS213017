@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restraunt</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="signup.html">SignUp</a></li>
+                <li><a href="login_page.html">Login</a></li>
+                <a href="#" class="btn btn-primary">Book A Table</a>
+            </ul>
+            <h1 class="logo">Moon Restaurant</h1>
+        </div>
+    </nav>
+    <section style="height: 600px;">
+        <div class="container">
+            <div class="row justify-content-center" >
+                <div class="col-md-6" style="margin-top: 50px;">
+                    <h2 class="text-center mt-5">Registration Form</h2>
+                    <form name="myForm" action="signup.php" method="post"> 
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                            <span id="message"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+        
+            </div>
+          </div>
+    </section>
+
+    <footer id="footer">
+        <h2>Moon Restraunt &copy; all rights reserved:  Contact : zoharaja274@gmail.com</h2>
+    
+    </footer>
+    
+   
+
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript for password matching -->
+    <script>
+    $(document).ready(function() {
+        $('#password, #confirmPassword').on('keyup', function() {
+            if ($('#password').val() == $('#confirmPassword').val()) {
+                $('#message').html('Matching').css('color', 'green');
+            } else {
+                $('#message').html('Not Matching').css('color', 'red');
+            }
+        });
+    });
+    </script>
+    <script>
+         function form() {
+       var x = document.forms["myForm"]["name"].value;
+       var z = document.forms["myForm"]["gmail"].value;
+       var a = document.forms["myForm"]["password"].value;
+      if (x == "") {
+       alert("Enter First Name");
+       return false;
+      }
+      else if( z== "" ){
+        alert("Enter Gmail");
+      return false;
+      }
+      else if( a== "" ){
+        alert("Enter Password");
+      return false;
+      }
+      else {
+        alert('You have sucessfully register.');
+        window.location.href = "index.html";
+        return false; 
+    }
+}
+    </script>
+</body>
+
+</html>
